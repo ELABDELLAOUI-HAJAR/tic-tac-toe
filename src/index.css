@@ -1,13 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(0,125,130);
+  color: white;
+  Font: 8vb "Sofia", sans-serif;
+  margin: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  margin: 10px;
+  padding: 20px;
+}
+
+.board-row {
+  display: flex;
+  flex-flow: row nowrap;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  margin: 20px;
+  font-size: 6vb;
+}
+
+.restart {
+  font-size: 6vb;
+}
+
+.square {
+  background-color: rgb(38, 3, 57);
+  color: white;
+  border: 1px solid #999;
+  padding: 0;
+  font-size: 20vb;
+  text-align: center;
+  width: 25vb;
+  height: 20vb;
+}
+
+.square:focus {
+  outline: none;
+  background-color: #8583e8;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body {
+    Font: 5vb "Sofia", sans-serif;
+    margin: 30px;
+  }
+
+  .square {
+    font-size: 10vb;
+    text-align: center;
+    width: 10vb;
+    height: 10vb;
+  }
+
+  .status {
+    font-size: 3vb;
+  }
+
+  .restart {
+    font-size: 3vb;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 670px) {
+  body {
+    Font: 7vb "Sofia", sans-serif;
+    margin: 30px;
+  }
+
+  .square {
+    font-size: 17vb;
+    text-align: center;
+    width: 17vb;
+    height: 17vb;
+  }
+
+  .status {
+    font-size: 4vb;
+  }
+
+  .restart {
+    font-size: 4vb;
+  }
 }
